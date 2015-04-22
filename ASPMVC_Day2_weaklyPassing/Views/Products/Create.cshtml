@@ -1,0 +1,24 @@
+﻿@model ASPMVC_Day2_PassingData.Models.ProductWithCategoryViewModel 
+
+@using (Html.BeginForm())
+{
+
+
+
+    <div>
+        @Html.LabelFor(m => m.Product.Category.Id , "Product Name:")
+        @Html.DropDownListFor(m =>  m.Product.Category.Id , Model.Categories, "Pick Something")
+    </div>
+
+        <div>
+            @Html.LabelFor(m => m.Product.Name, "Product Name:")
+            @Html.TextBoxFor(m => m.Product.Name)
+        </div>
+        <div>
+            @Html.LabelFor(a => a.Product.Price, "Product Price:")
+            @Html.TextBoxFor(b => b.Product.Price)
+        </div>
+        <input type="submit" value="Add Product Strongly Typed" />
+ 
+}
+

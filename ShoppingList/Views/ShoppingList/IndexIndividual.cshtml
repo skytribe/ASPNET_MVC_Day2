@@ -1,0 +1,29 @@
+﻿ 
+@model ShoppingList.Models.ShoppingCartViewModel
+
+ 
+<h2>Shopping Cart For </h2>
+@(Model.Cart.FirstName + " " + Model.Cart.LastName)
+
+<table style="width:100%">
+
+    @foreach (var product1 in this.Model.Cart.Products)
+    {
+ 
+
+        <tr>
+
+            <td>
+                @product1.Name
+            </td>
+            <td>
+                @product1.Price
+            </td> 
+        </tr>
+
+ 
+
+    }
+</table>
+ 
+<text>Total No. of Item :</text>@Model.Cart.TotalItems

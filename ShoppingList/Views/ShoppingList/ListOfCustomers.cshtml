@@ -1,0 +1,29 @@
+﻿ 
+@model ShoppingList.Models.ViewModelCustomers
+
+
+
+<h2>No Customer Specified so here is a list</h2>
+
+
+<table style="width:100%">
+
+    @foreach (var customer in this.Model.Customers)
+    {
+        <tr>
+            <td>
+                @(customer.FirstName + " " + customer.LastName)
+            </td>
+
+            <td>
+                @customer.ItemCount
+            </td>
+
+
+        </tr>
+
+    }
+</table>
+
+
+

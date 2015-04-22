@@ -1,0 +1,22 @@
+﻿@model CalcWebApp.Models.ViewModelCalculator
+
+@using (Html.BeginForm())
+{
+
+
+    <div>
+        @Html.LabelFor(m => m.Value1 , "Value 1:")
+        @Html.TextBoxFor(m => m.Value1)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Value2, "Value 2:")
+        @Html.TextBoxFor(m => m.Value2)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Result , "Result:")
+        @Html.DisplayTextFor(m => m.Result)
+    </div>
+                <input type="submit" value="Calculate" />
+
+}
+

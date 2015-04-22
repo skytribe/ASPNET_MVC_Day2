@@ -1,0 +1,46 @@
+﻿ 
+
+@{
+    var TotalPrice = 0m;
+
+
+    // Bad as this data access is in view 
+    var products = new List<Product> {
+                new Product {Name="Milk", Price =  10.5m },
+                new Product {Name="Eggs", Price = 21.5m, OnSale=true},
+                new Product {Name="Cheese", Price = 15.5m }
+            };
+}
+
+
+
+
+<h2>LAB EXERCISE</h2>
+
+
+<table style="width:100%">
+
+    @foreach (var product1 in products)
+    {
+    <tr style="background-color: @(product1.OnSale ? "lightgreen":"white") ">
+
+        <td>
+            @product1.Name
+        </td>
+        <td>
+            @product1.Price
+        </td>
+        @*<td>
+                @product1.OnSale
+            </td>*@
+
+    </tr>
+
+        TotalPrice = TotalPrice + product1.Price;
+
+    }
+</table>
+</br></br>
+<text>Total Price :</text>@TotalPrice
+
+
